@@ -1,7 +1,10 @@
 export function Footer () {
   return (
     <footer>
-      <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
+      <small>&copy; {currentYear()} C17. Todos los derechos reservados.</small>
     </footer>
   )
+}
+function currentYear() {
+  return new Date().getFullYear()
 }
