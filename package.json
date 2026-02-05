@@ -3,6 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "description": "Hostal Cervantes Segovia",
+  "homepage": "https://github.com/rudendario/cervantes#readme",
+  "bugs": {
+    "url": "https://github.com/rudendario/cervantes/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rudendario/cervantes.git"
+  },
   "license": "ISC",
   "author": "Ruben Dario Intriago",
   "type": "module",
