@@ -1,21 +1,34 @@
-import { Link } from "../Link";
+import { NavLink } from "react-router-dom";
 
-export function Header () {
+const navLinkClass = ({ isActive }) =>
+  isActive
+    ? "text-primary font-semibold"
+    : "text-gray-700 hover:text-primary";
+
+export default function Header() {
   return (
-    <header>
-      <Link href='/' style={{ textDecoration: 'none' }}>
-        <img src="public/logo.png" alt="Logo del Hostal Cervantes 17" />
-        <h1 style={{ color: 'white' }}>
-            HOSTAL CERVANTES 17 
-        </h1>
-      </Link>
+    <header className="border-b">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <h1 className="text-xl font-bold">Hostal Sol</h1>
 
-      <nav>
-        <Link href='/habitaciones' style={{ textDecoration: 'none', marginRight: '1rem' }}>
-          Pepito
-        </Link>
+        <ul className="flex gap-6">
+          <li>
+            <NavLink to="/" className={navLinkClass}>
+              Inicio
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/habitaciones" className={navLinkClass}>
+              Habitaciones
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/contacto" className={navLinkClass}>
+              Contacto
+            </NavLink>
+          </li>
+        </ul>
       </nav>
-
     </header>
-  )
+  );
 }
