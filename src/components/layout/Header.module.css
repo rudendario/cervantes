@@ -1,0 +1,36 @@
+@import "../../index.css";
+/* Header */
+header {
+  color: var(--text-primary);
+  background-color: var(--primary);
+  padding: 1rem;
+  margin: 1rem, 0;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+header nav ul li a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    color: var(--primary-hover);
+    border-bottom: var(--primary-hover);
+  }
+  &.active {
+    color: var(--primary-hover);
+    font-weight: 700;
+  }
+}

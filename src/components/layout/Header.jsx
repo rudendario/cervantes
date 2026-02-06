@@ -1,17 +1,17 @@
 import { NavLink } from "react-router-dom";
+import styles from "./Header.module.css";
 
 const navLinkClass = ({ isActive }) =>
   isActive
-    ? "text-primary font-semibold"
-    : "text-gray-700 hover:text-primary";
+    ? `${styles.activeLink}`
+    : `${styles.link}`;
 
 export default function Header() {
   return (
-    <header className="border-b">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <h1 className="text-xl font-bold">Hostal Sol</h1>
-
-        <ul className="flex gap-6">
+    <header className={styles.header}>
+      <nav className={styles.nav}>
+        <h1 className={styles.title}>HOSTAL CERVANTES 17</h1>
+        <ul className={styles.navList}>
           <li>
             <NavLink to="/" className={navLinkClass}>
               Inicio
